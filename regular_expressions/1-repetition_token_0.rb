@@ -13,7 +13,7 @@ match = argument.match(pattern)
 
 # Print the result
 if match
-  puts match[0]
+  puts match.length
 else
   puts "No match found"
 end
