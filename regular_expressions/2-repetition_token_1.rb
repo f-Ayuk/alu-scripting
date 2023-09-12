@@ -6,7 +6,7 @@
 argument = ARGV[0]
 
 # Define the regular expression pattern
-pattern = /hbt{2,5}n/
+pattern = /hbt{0,1}n/
 
 # Scan method to find all occurrences of the pattern in the argument
 matches = argument.scan(pattern)
