@@ -9,11 +9,11 @@ argument = ARGV[0]
 pattern =/hbt{2,5}n/
 
 # Match method to check if the argument matches the pattern
-match = argument.scan(pattern).join
+match = argument.scan(pattern)
 
 # Print the result
-if match
-  puts match[0]
-else
+if match.empty?
   puts "No match found"
+else
+  puts match.join
 end
