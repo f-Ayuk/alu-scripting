@@ -9,7 +9,7 @@ argument = ARGV[0]
 pattern =/hbt{2,5}n/
 
 # Match method to check if the argument matches the pattern
-match = argument.match(pattern)
+match = argument.scan(pattern).join
 
 # Print the result
 if match
