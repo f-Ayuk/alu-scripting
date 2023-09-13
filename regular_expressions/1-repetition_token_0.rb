@@ -6,14 +6,14 @@
 argument = ARGV[0]
 
 # Define the regular expression pattern
-pattern = /hbt{2,5}n/
+pattern =/hbt{2,5}n/
 
 # Match method to check if the argument matches the pattern
 match = argument.match(pattern)
 
 # Print the result
 if match
-  puts match[0]
+  puts match.join
 else
   puts "No match found"
 end
