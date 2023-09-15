@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # Check if an argument was provided
 if ARGV.empty?
-  puts "Usage: ./script_name.rb <input_string>"
+  puts "Usage: ./4-repetition_token_3.rb <input_string>"
   exit(1)
 end
 
