@@ -2,16 +2,18 @@
 # This is a Ruby script that accepts one argument and passes it to a regular expression matching method
 # The regular expression must match
 
-# Get the argument from the command line
-argument = ARGV[0]
+def match_regex(text)
+  regex = /hbt[nt]{2,5}/
+  if text.match(regex)
+    return text.match(regex).to_s
+  else
+    return "No match found"
+  end
+end
 
-# Define the regular expression pattern
-pattern = /hbt{3,5}n/
-
-# Use the scan method to find all occurrences of the pattern in the argument
-matches = argument.scan(pattern)
-
-# Use a loop to print each match on a new line
-matches.each do |match|
-  puts match[0]
+if ARGV.length != 1
+  puts "Please provide one argument."
+else
+  text = ARGV[0]
+  puts match_regex(text)
 end
