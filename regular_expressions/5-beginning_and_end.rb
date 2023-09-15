@@ -4,7 +4,7 @@
 argument = ARGV[0]
 
 # Define the regular expression pattern
-pattern = /h.n/
+pattern = /h.{1,2}n/
 
 # Use the match method to check if the argument matches the pattern
 match = argument.match(pattern)
