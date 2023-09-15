@@ -1,17 +1,19 @@
 #!/usr/bin/env ruby
 #regular expression matching method
-# Get the argument from the command line
-argument = ARGV[0]
+
+# Check if an argument was provided
+if ARGV.empty?
+  puts "Usage: ./5-beginning_and_end.rb <input_string>"
+  exit(1)
+end
+
+# Get the input string from the command line argument
+input_string = ARGV[0]
 
 # Define the regular expression pattern
-pattern = /h.{1,2}n/
+pattern = /^h.n$/
 
-# Use the match method to check if the argument matches the pattern
-match = argument.match(pattern)
-
-# Print the result
-if match
-  puts match[0]
-else
-  puts "No match found"
+# Check if the input string matches the pattern
+if pattern.match(input_string)
+  puts input_string
 end
