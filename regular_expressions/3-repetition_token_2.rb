@@ -4,10 +4,12 @@
 
 def match_regex(text)
   regex = /hbt[nt]{0,5}/
-  if text.match(regex)
-    return text.match(regex).to_s
+  match = text.match(regex)
+
+  if match.nil?
+    puts "No match found"
   else
-    return "No match found"
+    puts match.to_s
   end
 end
 
@@ -15,5 +17,5 @@ if ARGV.length != 1
   puts "Please provide one argument."
 else
   text = ARGV[0]
-  puts match_regex(text)
+  match_regex(text)
 end
