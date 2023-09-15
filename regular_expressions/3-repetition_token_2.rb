@@ -3,7 +3,7 @@
 # The regular expression must match
 
 def match_regex(text)
-  regex = /hbt[nt]{2,5}/
+  regex = /hbt[nt]{0,5}/
   if text.match(regex)
     return text.match(regex).to_s
   else
